@@ -44,6 +44,7 @@ namespace BookStoreProject
             //    await next();
             //});
 
+            app.UseStaticFiles();
             
             app.UseRouting();
 
@@ -53,9 +54,12 @@ namespace BookStoreProject
                 //{
                 //    await context.Response.WriteAsync("Hello World!");
                 //});
-
+                
                 endpoints.MapDefaultControllerRoute();
             });
+
+            //http:domain.com/controllerName/ActionMethoName
+
 
             app.UseEndpoints(endpoints =>
             {
@@ -69,3 +73,10 @@ namespace BookStoreProject
         }
     }
 }
+
+
+//routes.MapRoute(
+//    name: "Default",
+//    url: "{controller}/{action}/{id}",
+//    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+//);
