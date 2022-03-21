@@ -17,6 +17,14 @@ namespace BookStoreProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            //for run time compilation of razor file
+
+            #if DEBUG
+                services.AddRazorPages().AddRazorRuntimeCompilation();
+            #endif
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

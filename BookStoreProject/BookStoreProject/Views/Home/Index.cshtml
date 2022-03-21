@@ -1,9 +1,94 @@
-﻿
-@{
-    Layout = null;
+﻿@*@{
+        Layout = "_Layout";
+    }*@
+@*@{
+    var bookInfo = ViewData["book"] as BookModel;
+}
+<h1>@ViewData["title"]</h1>
+<h1>@bookInfo.Title</h1>
+<h1>@bookInfo.Id</h1>*@
+
+@{ 
+    ViewData["Title"] = "Home";
+}
+<div class="home-header">
+    <h1>Welcome To BookStore @ViewBag.Title</h1>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+    </p>
+    <button class="btn btn-outline-secondary btn-lg">Search</button>
+</div>
+
+<h3 class="h3 top-books">Top Books</h3>
+<div class="items">
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/leaf.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This section we will use to show description of book</p>
+            <div class="card-inner-div"><a href="#" class="btn btn-outline-secondary">View Details</a><span>Author name</span></div>
+
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/leaf.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This section we will use to show description of book</p>
+            <div class="card-inner-div"><a href="#" class="btn btn-outline-secondary">View Details</a><span>Author name</span></div>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="~/images/leaf.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This section we will use to show description of book</p>
+            <div class="card-inner-div"><a href="#" class="btn btn-outline-secondary">View Details</a><span>Author name</span></div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(() => {
+            //alert("document is ready")
+        })
+    </script>
 }
 
-<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
 <html>
 <head>
     <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -12,12 +97,12 @@
 </head>
 
 <body>
-    <h1>Welcome to the book store</h1>
-    @*<h1>currtent time: @DateTime.Now.ToString("dd-MM-yy")</h1>
+    <h1>Welcome to the book store</h1>-->
+@*<h1>currtent time: @DateTime.Now.ToString("dd-MM-yy")</h1>
     <h1>Sum of 3 and 4 is @(3+4)</h1>
 
     <h1>MultiLine Syntax</h1>
-    @{ 
+    @{
         int a = 10;
         int b = 20;
         int c = a + b;
@@ -25,7 +110,7 @@
     <h1>@c</h1>
     <h3>Email Id: aadeshyadav@forcebolt.com</h3>
     <h3>Twitter - @@forcebolt</h3>*@
-    @*@{ 
+@*@{
         int a = 10;
     }
     @if (a == 10)
@@ -33,13 +118,13 @@
         a++;
         <h1>Hello and value of a is @a</h1>
     }
-    else { 
+    else {
         <h1>Hii</h1>
     }*@
 
-    <img src="~/images/leaf.jpg" class="logo" alt="leaf image"/>
-   
-    <p>This is a home for book store web application.</p>
+<!--<img src="~/images/leaf.jpg" class="logo" alt="leaf image"/>-->
+@*<h1>THis is a runntime change</h1>*@
+<!--<p>This is a home for book store web application</p>
 </body>
 <script src="~/lib/jquery/jquery.js"></script>
 </html>
@@ -48,4 +133,4 @@
     $(document).ready(() => {
         alert("Page is loaded");
     })
-</script>
+</script>-->

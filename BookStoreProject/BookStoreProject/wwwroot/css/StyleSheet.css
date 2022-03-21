@@ -1,0 +1,39 @@
+﻿body {
+    
+}
+
+
+.home-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 40px;
+}
+.home-header p{
+    text-align: center;
+    padding: 0 16px;
+}
+.top-books {
+    width: 1250px;
+    margin: 0 auto;
+}
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 1250px;
+    margin: 16px auto;
+}
+.items>.card>img{
+    height:200px;
+}
+
+.items .card .card-body .card-inner-div{
+    display:flex;
+    justify-content:space-between;
+}
+.items .card .card-body .card-inner-div span {
+    align-self:center;
+}
+

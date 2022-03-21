@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace BookStoreProject.Controllers
 {
@@ -23,14 +24,16 @@ namespace BookStoreProject.Controllers
         public ViewResult GetAllBooks()
         {
             //return "['book1','book2','book3']";
-            var data = _bookRepository.GetAllBooks();
-            return View();
+            List<BookModel> data = _bookRepository.GetAllBooks();
+            return View(data);
         }
 
-        public dynamic GetBook(int id)
+        public ViewResult GetBook(int id)
         {
             //return $"book id = {id}";
-            return _bookRepository.GetBookById(id);
+            BookModel data =  _bookRepository.GetBookById(id);
+            //return data;
+            return View(data);
         }
         public dynamic SearchBook(string BookName,string AuthorName)
         {
